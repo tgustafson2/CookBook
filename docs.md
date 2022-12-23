@@ -21,6 +21,10 @@ interface RecipeQueryFilter{
 ```typescript
 getRecentRecipes()//returns recently created or used recipes
 
+//should getRecipes and variations only display enough for some display and not whole recipe
+//entire recipe could be accessed upon selection of a particular recipe
+//also potential route for images
+
 getRecipes({
 	filters: RecipeQueryFilter[]
 })//returns all public recipes that match filters
@@ -36,23 +40,23 @@ copyPublicRecipeToUser({
 
 makeUserRecipePublic({
 
-})//accepts a user and recipe title in req.params then creates a public recipe
+})//accepts a user and recipe title in req.body then creates a public recipe
 
 rateRecipe({
 
-})//accepts a user, rating, and recipe object id in req.params then adds to recipe rating and updates users ratings
+})//accepts a user, rating, and recipe object id in req.body then adds to recipe rating and updates users ratings
 
 createUser({
 
-})//accepts a user email in req.params then creates user
+})//accepts a user email in req.body then creates user
 
 createRecipe({
 
-})//accepts a recipe object and user in req.params then adds the recipe to the user's document
+})//accepts a recipe object and user in req.body then adds the recipe to the user's document
 
 updateRecipe({
 
-})//accepts a user and recipe object in req.params then updates the recipe
+})//accepts a user and recipe object in req.body then updates the recipe
 
 deleteUserRecipe({
 
